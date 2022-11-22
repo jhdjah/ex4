@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+		<title>饮香录</title>
+		<style>
+			html{
+				height: 100%;
+			}
+			body{
+				background-image: url("img/第3页(背景).png");
+				background-repeat: no-repeat;
+				background-position: center 0;
+				background-size:100% 100%;
+			}
+			img{
+				width: 20%;
+			}
+			img{
+				position: absolute;
+			}
+			.img1{
+				width: 40%;
+				top:-28%;
+				left: -5%;
+				
+			}
+			#img4{
+				width: 40%;
+				top:-28%;
+				left: 70%;
+			}
+			#img5{
+				bottom:5%;
+				left:18%;
+			}
+			#img6{
+				bottom:5%;
+				left: 40%;
+			}
+			#img7{
+				bottom:5%;
+				left: 63%;
+			}
+			.img8{
+				bottom:5%;
+				left: 0%;
+			}
+			.img9{
+				bottom:5%;
+				left: 80%;
+			}
+			#img10{
+				width: 70%;
+				bottom:23%;
+				left: 18%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<a href="index-1.html"><img class="img1" src="img/第3页 按钮 (1).png" /></a>
+			<span onclick="toop()"><img id="img4" src="img/第3页 按钮 (4).png" /></span>
+		</div>
+		<div id="div2">
+			<span onclick="into1()"><img id="img5" src="img2/1.png" /></span>
+			<span onclick="into2()"><img id="img6" src="img2/2.png" /></span>
+			<span onclick="into3()"><img id="img7" src="img2/3.png" /></span>
+			<span onclick="last()"><img class="img8" src="img/第3页 按钮 (6).png" /></span>
+			<span onclick="next()"><img class="img9" src="img/第3页 按钮 (7).png" /></span>
+		</div>
+		
+		<div id="div4">
+			<img id="img10" src="img2/1.png" />
+		</div>
+		<script>
+			var a = 0;
+			var b = 0;
+			var c = 1;
+			var p1=document.getElementById("img5");
+			var p2=document.getElementById("img6");
+			var p3=document.getElementById("img7");
+			var p4=document.getElementById("img10");
+			function last(){
+				a--;
+				b--;
+				if(b<0){
+					b=0;
+				}
+				if(a<0){
+					a=0;
+				}
+				var a1=a+1;
+				var a2=a+2;
+				var a3=a+3;
+				p1.src="img2/"+a1+".png";
+				p2.src="img2/"+a2+".png";
+				p3.src="img2/"+a3+".png";
+			}
+			function next(){
+				a++;
+				b++;
+				if(b>1){
+					b=1;
+				}
+				if(a>1){
+					a=1;
+				}
+				var a1=a+3;
+				var a2=a+4;
+				var a3=a+5;
+				p1.src="img2/"+a1+".png";
+				p2.src="img2/"+a2+".png";
+				p3.src="img2/"+a3+".png";
+			}
+			function into1(){
+				p4.src=p1.src;
+				c = 1;
+			}
+			function into2(){
+				p4.src=p2.src;
+				c = 2;
+			}
+			function into3(){
+				p4.src=p3.src;
+				c = 3;
+			}
+			function toop(){
+				if(b==0 && c==1){
+					window.location.href='index-3-1.html';
+				}
+				else if(b==0 && c==2){
+					window.location.href='index-3-2.html';
+				}
+				else if(b==0 && c==3){
+					window.location.href='index-3-3.html';
+				}
+				else if(b==1 && c==1){
+					window.location.href='index-3-4.html';
+				}
+				else if(b==1 && c==2){
+					window.location.href='index-3-5.html';
+				}
+				else if(b==1 && c==3){
+					window.location.href='index-3-6.html';
+				}
+			}
+		</script>
+	</body>
+</html>
